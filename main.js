@@ -12,12 +12,16 @@ do {
 } while (!isNaN(cognomeUtente))
 lista.push(cognomeUtente);
 lista.sort();
-console.log(cognomeUtente);
 
-
-console.log(cognomeUtente);
-for (i = 0; i < lista.length; i++) {
-  if (cognomeUtente === lista[i]) {
-    console.log(i)
-  }
+for (var i = 0; i < lista.length; i++) {
+  document.getElementById('risultato').innerHTML += "</br>" + "<div>" + lista[i] + "</div>";
 }
+
+
+
+// console.log(cognomeUtente);
+// for (i = 0; i < lista.length; i++) {
+//   if (cognomeUtente === lista[i]) {
+//     console.log(i)
+//   }
+// }
