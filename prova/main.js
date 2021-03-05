@@ -11,8 +11,24 @@ do {
   var cognomeUtente = cognomeUtente[0].toUpperCase() + cognomeUtente.slice(1)
 } while (!isNaN(cognomeUtente))
 
+
 lista.push(cognomeUtente);
-lista.sort();
+// lista.sort();
+
+
+do { //ordinamento Alfabetico;
+  var scambio = false;
+
+  for (i = 0; i < lista.length - 1; i++) {
+    if (lista[i] > lista[i + 1]) {
+      var appoggio = lista[i];
+      lista[i] = lista[i + 1];
+      lista[i + 1] = appoggio;
+      scambio = true;
+    }
+  }
+} while (scambio);
+
 
 for (var i = 0; i < lista.length; i++) {
   document.getElementById('risultato').innerHTML += "</br>" + "<div>" + lista[i] + "</div>";
